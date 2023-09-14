@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Gallery</title>
+</head>
+<body>
+    <h1>Image Gallery</h1>
+    
+    <!-- Loop through the list of image file names and display all the images -->
+    <div th:each="imageName : ${imageFileNames}">
+        <img th:src="@{'/images/' + ${imageName}}" alt="Image" width="200" height="150">
+    </div>
+</body>
+</html>
